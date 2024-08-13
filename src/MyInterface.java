@@ -1,17 +1,20 @@
 public interface MyInterface {
-    default void sayHello(){
-        System.out.println("Hello");
-    }
-  public  class Child implements MyInterface{
+    void show();
+}
+class Test implements MyInterface{
+
+
     @Override
-    public void sayHello(){
-        System.out.println("Hello in child class");
+    public void show() {
+
+            System.out.println("I am in show method");
+
     }
-    }
-    public class MyClass{
-        public static void main(String[] args) {
-            Child c= new Child();
-            c.sayHello();
-        }
+}
+class Main{
+
+    public static void main(String[] args) {
+        Test t=new Test();
+        t.show();
     }
 }
